@@ -36,8 +36,6 @@ vault_user_groups:
 
 
 
-
-
 Dependencies
 ------------
 
