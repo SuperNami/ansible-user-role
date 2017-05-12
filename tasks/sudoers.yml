@@ -1,0 +1,7 @@
+---
+- name: copy user sudoers file
+  template: src=user.j2
+            dest=/etc/sudoers.d/user
+            owner=root
+            group=root
+            mode=0440

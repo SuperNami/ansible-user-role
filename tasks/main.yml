@@ -1,0 +1,6 @@
+---
+- include: user.yml
+  tags: add_user
+
+- include: sudoers.yml
+  tags: sudoers_file

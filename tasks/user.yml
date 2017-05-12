@@ -1,0 +1,18 @@
+---
+- name: create administrative user group
+  group: name={{ user_group }}
+         state=present
+
+
+- name: create administrative user
+  user: name={{ user }}
+        uid={{ user_uid }}
+        home={{ user_home }}
+        password={{ user_password }}
+        shell={{ user_shell }}
+        group={{ user_group }}
+        groups={{ ",".join(user_groups) }}
+        comment="{{ user_comment }}"
+        append={{ user_append }}
+        state=present
+  ignore_errors: yes

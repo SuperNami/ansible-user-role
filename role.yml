@@ -1,0 +1,11 @@
+---
+- name: user
+  hosts: all
+  user: root
+  become: true
+  roles:
+  - user
+  vars_files:
+  - defaults/main.yml
+  - vars/secrets.yml
+  - vars/vault.yml
